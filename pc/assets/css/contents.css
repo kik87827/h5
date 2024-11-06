@@ -3,3 +3,39 @@
 	컨텐츠 css
 */
 
+/* main */
+.mc_brick_container{}
+.mc_brick_row{}
+.mc_brick_row .cols_liquid{}
+.mc_brick_row .cols_short{}
+.mc_brick_group{}
+
+.mc_brick_list{}
+.mc_brick_list > li{}
+.mc_brick{}
+.mc_brick.skin2{}
+.mc_title_row{}
+.mc_title_item{}
+.mc_title_item .ico{}
+.mc_title_item .ico.shape_men{}
+.mc_title{}
+.mc_title_else{}
+.brief_item{}
+.brief_item .ico{}
+.brief_item .ico.shape_time{}
+.brief_text{}
+.mc_contents_row{}
+.btn_mcmore{display:block;content:'';width:24px;height:24px;}
+.btn_mcmore:before,
+.btn_mcmore:after{display:block;content:'';width:10px;height:2px;background:#494949;position:absolute;top:50%;left:50%;margin:-1px 0 0 -5px;}
+.btn_mcmore:before{}
+.btn_mcmore:after{transform:rotate(90deg);}
+
+.mc_tabmenu_list{}
+.mc_tabmenu_list > li{}
+.mc_tabmenu_list > li:last-of-type{}
+
+.mc_tabmenu{}
+.mc_tabmenu.active{}
+.mc_tabcont{}
+.mc_tabcont.active{}

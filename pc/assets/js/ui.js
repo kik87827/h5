@@ -18,7 +18,22 @@ H5 = {
 		$(window).on("load",function(){
 		});
 	},
-	
+	layerCommon : function(){
+		var $hlog_target = $(".hlog_target"),
+			$hlog_layer = $(".hlog_layer");
+		$hlog_target.on("click",function(){
+			var $this = $(this),
+				$t_n = $this.next(".hlog_layer");
+			$this.toggleClass("active");
+			$t_n.slideToggle();
+		});
+		$(document).on("click",function(e){
+			if(!$(e.target).parents(".hlogdata").length){
+				$hlog_target.removeClass("active");
+				$hlog_layer.slideUp();
+			}
+		});
+	},
 	dimLayerControl : function(){
 		var thisUI = this;
 		$(document).on("click",".btn_layerclose , .closetrigger",function(){
