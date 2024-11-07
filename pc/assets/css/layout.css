@@ -44,6 +44,12 @@ body ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10p
 .utilmenu_list > li:last-of-type{}
 .utilmenu{}
 .utilmenu img{}
+.utilmenu_wrap{}
+.utilmenu_count{}
+.bullet_notice_list{}
+.bullet_notice_list > li{}
+.bullet_notice_list > li:last-of-type{}
+.bullet_notice_list > li:before{}
 
 .gnb_zone{}
 .gnb_wrap{}
