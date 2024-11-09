@@ -80,8 +80,8 @@ select::-ms-expand {display: none;}
 	textarea{font-size:14px;}
 }
 
-::-webkit-input-placeholder{color:#999;font-family: 'NotoSans-Regular';}
-::-moz-input-placeholder{color:#999;font-family: 'NotoSans-Regular';}
-:-ms-input-placeholder{color:#999 !important;font-family: 'NotoSans-Regular';}
-::-ms-input-placeholder{color:#999 !important;font-family: 'NotoSans-Regular';}
-::input-placeholder{color:#999;font-family: 'NotoSans-Regular';}
+::-webkit-input-placeholder{color:#b5b5b5;font-family: 'NotoSans-Regular';}
+::-moz-input-placeholder{color:#b5b5b5;font-family: 'NotoSans-Regular';}
+:-ms-input-placeholder{color:#b5b5b5 !important;font-family: 'NotoSans-Regular';}
+::-ms-input-placeholder{color:#b5b5b5 !important;font-family: 'NotoSans-Regular';}
+::input-placeholder{color:#b5b5b5;font-family: 'NotoSans-Regular';}

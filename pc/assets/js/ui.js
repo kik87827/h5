@@ -58,6 +58,87 @@ H5 = {
 				$(".utilmenu_layer").fadeOut();
 			}
 		});
+
+		function leftMenu(){
+			const gnb_li = $(".gnb_list > li");
+			const gnb_zone = $(".gnb_zone");
+			const gnb_one = $(".gnb_one");
+			const page_wrap = $(".page_wrap");
+			const btn_depth_toggle = $(".btn_depth_toggle");
+			const acc_item = $(".acc_one,.acc_two,.acc_three");
+			const acc_one = $(".acc_one");
+			const acc_two = $(".acc_two");
+			const acc_three = $(".acc_three");
+			let left_dim = null;
+			let opentTime = 0;
+			let closeTime = 0;
+			if(gnb_zone.length && $(".left_dim").length === 0){
+				page_wrap.append("<div class='left_dim' />");
+				left_dim = $(".left_dim");
+			}
+			gnb_one.on("click",function(e){
+				const thisItem = $(this);
+				const thisParent = thisItem.closest("li");
+				const thisGnb = thisParent.find(".gnb_depth_wrap");
+
+				if(thisGnb.length){
+					e.preventDefault();
+				}
+
+				gnb_li.not(thisParent).removeClass("active");
+
+				thisParent.toggleClass("active");
+				left_dim.fadeToggle();
+				thisGnb.addClass("active");
+
+				if(thisParent.hasClass("active")){
+					openMotionPanel(thisGnb);
+				}else{
+					closePanel(thisGnb);
+				}
+			});
+			
+			btn_depth_toggle.on("click",function(){
+				const thisItem = $(this);
+				const thisParent = thisItem.closest("li");
+				const thisGnb = thisParent.find(".gnb_depth_wrap");
+				
+				closePanel(thisGnb);
+				thisParent.removeClass("active");
+				left_dim.fadeOut();
+			});
+			
+			acc_item.on("click",function(){
+				const thisItem = $(this);
+				const thisParent = thisItem.closest("li");
+				
+				thisParent.toggleClass("active");
+			});
+			
+			left_dim.on("click",function(){
+				closePanel($(".gnb_depth_wrap.active"));
+				gnb_li.removeClass("active");
+				left_dim.fadeOut();
+			});
+			function openMotionPanel(gnb){
+				if(opentTime){
+					clearTimeout(opentTime);
+				}
+				opentTime = setTimeout(()=>{
+					gnb.addClass("motion");
+				},20);
+			}
+			function closePanel(gnb){
+				if(closeTime){
+					clearTimeout(closeTime);
+				}	
+				gnb.removeClass("motion");
+				closeTime = setTimeout(()=>{
+					gnb.removeClass("active");
+				},520);
+			}
+		}
+		leftMenu();
 	},
 	dimLayerControl : function(){
 		var thisUI = this;
