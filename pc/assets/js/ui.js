@@ -232,6 +232,51 @@ H5 = {
 				}
 			});
 		});
+	},
+	tabDrag(target,callback){
+		const tabContainer = document.querySelectorAll(target);
+		if(tabContainer.length){
+			tabContainer.forEach((domContainer)=>{
+				let isDragging = false;
+				let startX;
+				let scrollLeft;
+		
+				domContainer.addEventListener('mousedown', (e) => {
+					isDragging = true;
+					domContainer.classList.add('active');
+					startX = e.pageX - domContainer.offsetLeft;
+					scrollLeft = domContainer.scrollLeft;
+				});
+		
+				domContainer.addEventListener('mouseleave', () => {
+					isDragging = false;
+				});
+		
+				domContainer.addEventListener('mouseup', () => {
+					isDragging = false;
+				});
+		
+				domContainer.addEventListener('mousemove', (e) => {
+					if (!isDragging) return;
+					e.preventDefault();
+					const x = e.pageX - domContainer.offsetLeft;
+					const walk = (x - startX) * 2; // 드래그 속도 조절
+					domContainer.scrollLeft = scrollLeft - walk;
+				});
+		
+				domContainer.addEventListener('click', (e) => {
+					if (!isDragging) { // 드래그 중이 아닐 때만 탭 클릭 동작
+						if (e.target.classList.contains('sc_tab')) {
+							if(callback){
+								callback(e.target);
+							}
+							
+							// 원하는 액션 추가
+						}
+					}
+				});
+			});
+		}
 	}
 };
 H5.init();
