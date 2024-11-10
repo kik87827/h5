@@ -63,6 +63,7 @@ H5 = {
 			const gnb_li = $(".gnb_list > li");
 			const gnb_zone = $(".gnb_zone");
 			const gnb_one = $(".gnb_one");
+			const gnb_depth_wrap = $(".gnb_depth_wrap");
 			const page_wrap = $(".page_wrap");
 			const btn_depth_toggle = $(".btn_depth_toggle");
 			const acc_item = $(".acc_one,.acc_two");
@@ -85,15 +86,17 @@ H5 = {
 					return;
 				}
 				e.preventDefault();
-				left_dim.fadeToggle();
+				
 
 				gnb_li.not(thisParent).removeClass("active");
 
 				thisParent.toggleClass("active");
+				gnb_depth_wrap.not(thisGnb).removeClass("active");
 				thisGnb.addClass("active");
 
 				if(thisParent.hasClass("active")){
 					openMotionPanel(thisGnb);
+					left_dim.fadeIn();
 				}else{
 					closePanel(thisGnb);
 				}
@@ -109,11 +112,13 @@ H5 = {
 				left_dim.fadeOut();
 			});
 			
-			acc_item.on("click",function(){
+			acc_item.on("click",function(e){
 				const thisItem = $(this);
 				const thisParent = thisItem.closest("li");
-				
-				thisParent.toggleClass("active");
+				if(thisParent.find("ul > li").length){
+					e.preventDefault();
+					thisParent.toggleClass("active");
+				}
 			});
 			
 			left_dim.on("click",function(){
@@ -134,6 +139,7 @@ H5 = {
 					clearTimeout(closeTime);
 				}	
 				gnb.removeClass("motion");
+				left_dim.fadeOut(520);
 				closeTime = setTimeout(()=>{
 					gnb.removeClass("active");
 				},520);
