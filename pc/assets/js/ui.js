@@ -81,14 +81,15 @@ H5 = {
 				const thisParent = thisItem.closest("li");
 				const thisGnb = thisParent.find(".gnb_depth_wrap");
 
-				if(thisGnb.length){
-					e.preventDefault();
+				if(thisGnb.length === 0){
+					return;
 				}
+				e.preventDefault();
+				left_dim.fadeToggle();
 
 				gnb_li.not(thisParent).removeClass("active");
 
 				thisParent.toggleClass("active");
-				left_dim.fadeToggle();
 				thisGnb.addClass("active");
 
 				if(thisParent.hasClass("active")){
