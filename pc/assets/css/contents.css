@@ -399,6 +399,7 @@ input.inline_input{border:1px solid #dddddd; border-radius:4px; padding:0 13px; 
 
 /* button */
 .btn_guide_box{border:1px solid #ddd;padding:10px 20px;color:#000;display:inline-block; background:#fff;}
+.btn_guide_box .btn_box_text{color:#000;}
 .btn_box_group{text-align: center; display:flex; justify-content: center; flex-wrap:wrap;margin-top:20px;}
 .btn_box_group.pos_bottom{margin:16px 16px -3px;}
 .btn_box_group.pos_bottom .btn_box{margin:3px;}
