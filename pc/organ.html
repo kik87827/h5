@@ -358,8 +358,12 @@
 											<tr>
 												<th><span class="search_form_key">기준일</span></th>
 												<td>
-													<ul class="inline_form_list items_type">
-														<li><input type="text" class="form_input datepicker has_btn"></li>
+													<ul class="inline_form_list items_type gap_type2">
+														<li>
+															<div class="datepicker_item">
+																<input type="text" class="form_input datepicker">
+															</div>
+														</li>
 														<li>
 															<div class="props_item">
 																<input type="checkbox" class="props_form" id="search_chk01">
@@ -395,57 +399,9 @@
 											<ul class="depth01_list">
 												<li>
 													<a href="#" class="depth01"><span class="depth_inner_text">윤리감사실</span></a>
-													<div class="depth02_list_wrap">
-														<ul class="depth02_list">
-															<li>
-																<a href="#" class="depth02"><span class="depth_inner_text">메뉴 2</span></a>
-																<div class="depth03_list_wrap">
-																	<ul class="depth03_list">
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																	</ul>
-																</div>
-															</li>
-															<li>
-																<a href="#" class="depth02"><span class="depth_inner_text">메뉴 2</span></a>
-																<div class="depth03_list_wrap">
-																	<ul class="depth03_list">
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																	</ul>
-																</div>
-															</li>
-														</ul>
-													</div>
 												</li>
 												<li>
 													<a href="#" class="depth01"><span class="depth_inner_text">교육총괄센터</span></a>
-													<div class="depth02_list_wrap">
-														<ul class="depth02_list">
-															<li>
-																<a href="#" class="depth02"><span class="depth_inner_text">메뉴 2</span></a>
-																<div class="depth03_list_wrap">
-																	<ul class="depth03_list">
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																	</ul>
-																</div>
-															</li>
-															<li>
-																<a href="#" class="depth02"><span class="depth_inner_text">메뉴 2</span></a>
-																<div class="depth03_list_wrap">
-																	<ul class="depth03_list">
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																		<li><a href="#" class="depth03"><span class="depth_inner_text">메뉴 3</span></a></li>
-																	</ul>
-																</div>
-															</li>
-														</ul>
-													</div>
 												</li>
 												<li>
 													<a href="#" class="depth01"><span class="depth_inner_text">경영지원본부</span></a>
@@ -501,7 +457,7 @@
 														</ul>
 													</div>
 												</li>
-												<li>
+												<li class="active">
 													<a href="#" class="depth01"><span class="depth_inner_text">경영품질원</span></a>
 													<div class="depth02_list_wrap">
 														<ul class="depth02_list">
@@ -545,16 +501,14 @@
 																	</ul>
 																</div>
 															</li>
-															<li>
+															<li class="active">
 																<a href="#" class="depth02"><span class="depth_inner_text">서비스경영본부</span></a>
 																<div class="depth03_list_wrap">
 																	<ul class="depth03_list">
-																		<li>
-																			<a href="#" class="depth03_list_wrap"><span class="depth_inner_text">서비스혁신센터</span></a>
-																			<a href="#" class="depth03_list_wrap"><span class="depth_inner_text">경쟁력향상센터</span></a>
-																			<a href="#" class="depth03_list_wrap"><span class="depth_inner_text">CEO&INNO센터</span></a>
-																			<a href="#" class="depth03_list_wrap"><span class="depth_inner_text">공공가치혁신사업단</span></a>
-																		</li>
+																		<li class="active"><a href="#" class="depth03"><span class="depth_inner_text">서비스혁신센터</span></a></li>
+																		<li><a href="#" class="depth03"><span class="depth_inner_text">경쟁력향상센터</span></a></li>
+																		<li><a href="#" class="depth03"><span class="depth_inner_text">CEO&INNO센터</span></a></li>
+																		<li><a href="#" class="depth03"><span class="depth_inner_text">공공가치혁신사업단</span></a></li>
 																	</ul>
 																</div>
 															</li>
@@ -583,9 +537,9 @@
 											<div class="fv_tb_wrap">
 												<table class="fv_tb">
 													<colgroup>
-														<col style="width:20%">
-														<col style="width:40%">
-														<col style="width:20%">
+														<col style="width:15%">
+														<col style="width:35%">
+														<col style="width:15%">
 														<col>
 													</colgroup>
 													<tbody>
@@ -631,7 +585,7 @@
 														</tr>
 														<tr>
 															<th><span class="fv_label">비고</span></th>
-															<td colspan="3"><span class="fv_value">임시조직 신설</span></td>
+															<td colspan="3"><span class="fv_value">임시조직 신설<br><br><br><br><br></span></td>
 														</tr>
 													</tbody>
 												</table>
@@ -646,6 +600,27 @@
 			</section>
 			<script>
 				H5.tabDrag("#panel_tab_container");
+				H5.datepicker();
+				// 조직트리
+				$(function(){
+					// init
+					$(".depth01_list > li").each(function(){
+						let thisItem = $(this);
+						let thisDepth2 = thisItem.children(".depth02_list_wrap");
+
+						if(thisDepth2.length === 0){
+							thisItem.addClass("not_depth");
+						}
+					});
+
+					// event
+					$(".depth01,.depth02,.depth03").on("click",function(e){
+						let thisItem = $(this);
+						let thisCloset = thisItem.closest("li");
+						e.preventDefault();
+						thisCloset.toggleClass("active");
+					});
+				});
 			</script>
 			<!-- // middle -->
 		</div>

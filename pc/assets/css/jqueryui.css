@@ -135,6 +135,7 @@
 	display:flex;
 	align-items: center;
 	justify-content: center;
+	/* flex-direction: row-reverse; */
 	white-space: nowrap;
 	text-align: center;
 	font-size: 17px;

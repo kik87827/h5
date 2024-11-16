@@ -262,6 +262,40 @@ H5 = {
 			});
 		});
 	},
+	datepicker(){
+		$(function(){
+			
+			$(".datepicker_item").each(function(){
+				let $this = $(this);
+				$this.find( "input.datepicker" ).datepicker({
+					showOn: "both", // 버튼을 클릭했을 때 달력 표시
+					buttonImage: "./assets/images/ico_calendar.png",
+					changeMonth: true,  // 월 선택 활성화
+					changeYear: true,   // 년도 선택 활성화
+					dateFormat: "yy-mm-dd", // 날짜 형식
+					monthNames: [
+						"1월", "2월", "3월", "4월", "5월", "6월",
+						"7월", "8월", "9월", "10월", "11월", "12월"
+					], // 월 이름 설정
+					monthNamesShort: [
+						"1월", "2월", "3월", "4월", "5월", "6월",
+						"7월", "8월", "9월", "10월", "11월", "12월"
+					], // 월 이름 (축약형) 설정
+					dayNames: [
+						"일", "월", "화", "수", "목", "금", "토"
+					], // 요일 전체 이름
+					dayNamesMin: [
+						"일", "월", "화", "수", "목", "금", "토"
+					], // 요일 축약 이름
+				});
+				/* $thisButton = $this.find(".ui-datepicker-trigger");
+				
+				$thisInput.on("focus",function(){
+					$thisButton.trigger("click");
+				}); */
+			});
+		});
+	},
 	tabDrag(target,callback){
 		const tabContainer = document.querySelectorAll(target);
 		if(tabContainer.length){

@@ -380,6 +380,10 @@
 								<div class="sign_else_row">
 									<div class="fv_tb_wrap skin3">
 										<table class="fv_tb">
+											<colgroup>
+												<col style="width:15%">
+												<col>
+											</colgroup>
 											<tbody>
 												<tr>
 													<th><span class="fv_label">참조</span></th>
@@ -402,11 +406,17 @@
 								<div class="cont_brick_contents">
 									<div class="fv_tb_wrap skin2">
 										<table class="fv_tb">
+											<colgroup>
+												<col style="width:15%">
+												<col style="width:25%">
+												<col style="width:15%">
+												<col>
+											</colgroup>
 											<tbody>
 												<tr>
 													<th><span class="fv_label">신청자</span></th>
 													<td colspan="3">
-														<ul class="inline_form_list items_type">
+														<ul class="inline_form_list each_type">
 															<li><span class="inline_items">E8471</span></li>
 															<li><span class="inline_items">한 **</span></li>
 															<li><span class="inline_items">인재경영실</span></li>
@@ -486,14 +496,18 @@
 									</div>
 								</div>
 								<div class="cont_brick_contents">
-									<div class="fv_tb_wrap">
+									<div class="fv_tb_wrap file_type">
 										<table class="fv_tb">
 											<tr>
 												<th><span class="fv_label">파일</span></th>
 												<td>
 													<div class="file_upload_container">
 														<div class="file_upload_liquid">
-															<input type="file" class="file_form">
+															<div class="file_upload_btn_box">
+																<span class="btn_file_upload">파일 선택</span>
+																<input type="file" class="file_form">
+															</div>
+															<p class="file_upload_value">선택된 파일없음</p>
 														</div>
 														<div class="file_upload_short">
 															<a href="#" class="btn_box"><span class="btn_box_text">등록</span></a>
@@ -508,8 +522,8 @@
 											<table class="list_hor_tb">
 												<colgroup>
 													<col>
-													<col style="width:10%">
-													<col style="width:10%">
+													<col style="width:15%">
+													<col style="width:15%">
 												</colgroup>
 												<thead>
 													<tr>
@@ -585,6 +599,19 @@
 						}
 					}); // hide
 				 */
+
+				// file
+				let file_upload_liquid = document.querySelectorAll(".file_upload_liquid");
+				if(!!file_upload_liquid){
+					file_upload_liquid.forEach((item)=>{
+						let thisItem = item;
+						let thisForm = thisItem.querySelector(".file_form");
+						let thisValue = thisItem.querySelector(".file_upload_value");
+						thisForm.addEventListener("change",(e)=>{
+							thisValue.textContent = thisForm.value;
+						});
+					})
+				}
 
 				// event
 				document.querySelector("#btnCall").addEventListener("click", () => {
