@@ -294,7 +294,51 @@ H5 = {
 					$thisButton.trigger("click");
 				}); */
 			});
+			$(".datapicker_inform").datepicker({
+				changeMonth: true,  // 월 선택 활성화
+				changeYear: true,   // 년도 선택 활성화
+				dateFormat: "yy.mm.dd", // 날짜 형식
+				monthNames: [
+					"1월", "2월", "3월", "4월", "5월", "6월",
+					"7월", "8월", "9월", "10월", "11월", "12월"
+				], // 월 이름 설정
+				monthNamesShort: [
+					"1월", "2월", "3월", "4월", "5월", "6월",
+					"7월", "8월", "9월", "10월", "11월", "12월"
+				], // 월 이름 (축약형) 설정
+				dayNames: [
+					"일", "월", "화", "수", "목", "금", "토"
+				], // 요일 전체 이름
+				dayNamesMin: [
+					"일", "월", "화", "수", "목", "금", "토"
+				]
+			});
 		});
+	},
+	searchBox(){
+		const search_form_tb = document.querySelectorAll(".search_form_tb");
+		action();
+		window.addEventListener("resize",()=>{
+			action();
+		});
+
+		function action(){
+			if(search_form_tb.length){
+				search_form_tb.forEach((item)=>{
+					let thisItem = item;
+					let thisItemSet = thisItem.querySelector(".resize_wid_set");
+					let thisItemGet = thisItem.querySelector(".resize_wid_get");
+					if(!!thisItemGet && !!thisItemSet){
+						thisItemSet.removeAttribute("style");
+						if(window.innerWidth > 1919){
+							thisItemSet.style.width = thisItemGet.getBoundingClientRect().width + "px";
+						}else{
+							thisItemSet.style.width = "auto";
+						}
+					}
+				});
+			}
+		}
 	},
 	tabDrag(target,callback){
 		const tabContainer = document.querySelectorAll(target);
@@ -339,6 +383,85 @@ H5 = {
 					}
 				});
 			});
+		}
+	},
+	dataTable(target){
+		let domTarget = document.querySelectorAll(target);
+		action();
+		window.addEventListener("resize",()=>{
+			action();
+		});
+
+		function action(){
+			if(domTarget.length){
+				domTarget.forEach((item)=>{
+					const itemGroup = item;
+					const itemOptionHeight = itemGroup.dataset.scrollheight;
+					const itemFixedTh = itemGroup.querySelectorAll(".data_thead_row .data_fixed_cols .data_thead_tb th");
+					const itemFixedTd = itemGroup.querySelectorAll(".data_tbody_row .data_fixed_cols .data_tbody_tb tr:first-child td");
+					const itemLiquidTh = itemGroup.querySelectorAll(".data_thead_row .data_liquid_cols .data_thead_tb th");
+					const itemLiquidTd = itemGroup.querySelectorAll(".data_tbody_row .data_liquid_cols .data_tbody_tb tr:first-child td");
+					const itemTheadScroll = itemGroup.querySelector(".data_thead_tb_wrap");
+					const itemTbodyScroll = itemGroup.querySelector(".data_tbody_tb_wrap");
+					const itemTbodyFixedScroll = itemGroup.querySelector(".data_tbody_fixed_tb_wrap");
+					const itemTbody = itemGroup.querySelector(".data_tbody_row");
+					
+					if(itemFixedTh.length){
+						itemFixedTh.forEach((thisTh,index)=>{
+							let styleTarget = [itemFixedTh[index],itemFixedTd[index]];
+							styleTarget.forEach((item)=>{
+								item.removeAttribute("style");
+							});
+							setTimeout(()=>{
+								let maxArray = Math.max.apply(null,[itemFixedTh[index].children[0].getBoundingClientRect().width,itemFixedTd[index].children[0].getBoundingClientRect().width]);
+								
+								styleTarget.forEach((item)=>{
+									item.children[0].style.width = maxArray + "px"; 
+								});
+							},30);
+						});
+					}
+					if(itemLiquidTh.length){
+						itemLiquidTh.forEach((thisTh,index)=>{
+							let styleTarget = [itemLiquidTh[index],itemLiquidTd[index]];
+							styleTarget.forEach((item)=>{
+								item.removeAttribute("style");
+							});
+							setTimeout(()=>{
+								let maxArray = Math.max.apply(null,[itemLiquidTh[index].children[0].getBoundingClientRect().width,itemLiquidTd[index].children[0].getBoundingClientRect().width]);
+								console.log(itemLiquidTh[0].children[0].getBoundingClientRect().width,itemLiquidTd[0].children[0].getBoundingClientRect().width);
+								styleTarget.forEach((item)=>{
+									item.children[0].style.width = maxArray + "px"; 
+								});
+							},30);
+						});
+					}
+					if(!!itemTheadScroll || !!itemTbodyScroll){
+						itemTbodyScroll.addEventListener("scroll",(e)=>{
+							itemTheadScroll.scrollLeft = e.currentTarget.scrollLeft;
+						});
+						itemTheadScroll.addEventListener("scroll",(e)=>{
+							itemTbodyScroll.scrollLeft = e.currentTarget.scrollLeft;
+						});
+					}
+
+					if(!!itemTbodyFixedScroll || !!itemTbodyScroll){
+						[itemTbodyFixedScroll,itemTbodyScroll].forEach((item)=>{
+							item.style.maxHeight = `110px`
+						})
+						itemTbodyFixedScroll.addEventListener("scroll",(e)=>{
+							itemTbodyScroll.scrollTop = e.currentTarget.scrollTop;
+						});
+						itemTbodyScroll.addEventListener("scroll",(e)=>{
+							itemTbodyFixedScroll.scrollTop = e.currentTarget.scrollTop;
+						});
+					}
+
+					/* if(!!itemTbody){
+						itemTbody.style.maxHeight = `200px`
+					} */
+				});
+			}
 		}
 	}
 };

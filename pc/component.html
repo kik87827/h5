@@ -356,40 +356,171 @@
 									<p class="cb_title">컨포넌트</p>
 								</div>
 								<div class="cbox_contents">
-									<div class="fv_tb_wrap">
+									<div class="fv_tb_wrap guide">
 										<table class="fv_tb">
 											<tbody>
 												<tr>
 													<th><span class="fv_label">Input</span></th>
-													<td></td>
+													<td><input type="text" class="form_input"></td>
 													<th><span class="fv_label">Input Disabled</span></th>
-													<td></td>
+													<td><input type="text" class="form_input" disabled></td>
 												</tr>
 												<tr>
 													<th><span class="fv_label">Select</span></th>
-													<td></td>
+													<td><select class="form_select autoitem"><option>전체</option></select></td>
 													<th><span class="fv_label">Select Disabled</span></th>
-													<td></td>
+													<td><select class="form_select autoitem" disabled><option>전체</option></select></td>
 												</tr>
 												<tr>
 													<th><span class="fv_label">Radio</span></th>
-													<td></td>
+													<td>
+														<ul class="inline_form_list items_type gap_type2">
+															<li>
+																<div class="props_item">
+																	<input type="radio" name="radio" class="props_form" id="search_rd01">
+																	<label for="search_rd01" class="props_label">디폴트</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="radio" name="radio" class="props_form" id="search_rd02" checked>
+																	<label for="search_rd02" class="props_label">체크됨</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="radio" name="radio" class="props_form" id="search_rd03" disabled>
+																	<label for="search_rd03" class="props_label">비활성화</label>
+																</div>
+															</li>
+														</ul>
+														<br>
+														<ul class="inline_form_list items_type gap_type2">
+															<li>
+																<div class="props_item">
+																	<input type="radio" name="radio2" class="props_form sm" id="search2_rd01">
+																	<label for="search2_rd01" class="props_label">디폴트</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="radio" name="radio2" class="props_form sm" id="search2_rd02" checked>
+																	<label for="search2_rd02" class="props_label">체크됨</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="radio" name="radio2" class="props_form sm" id="search2_rd03" disabled>
+																	<label for="search2_rd03" class="props_label">비활성화</label>
+																</div>
+															</li>
+														</ul>
+													</td>
 													<th><span class="fv_label">checkbox</span></th>
-													<td></td>
+													<td>
+														<ul class="inline_form_list items_type gap_type2">
+															<li>
+																<div class="props_item">
+																	<input type="checkbox" class="props_form" id="search_chk01">
+																	<label for="search_chk01" class="props_label">디폴트</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="checkbox" class="props_form" id="search_chk02" checked>
+																	<label for="search_chk02" class="props_label">체크됨</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="checkbox" class="props_form" id="search_chk03" disabled>
+																	<label for="search_chk03" class="props_label">비활성화</label>
+																</div>
+															</li>
+														</ul>
+														<br>
+														<ul class="inline_form_list items_type gap_type2">
+															<li>
+																<div class="props_item">
+																	<input type="checkbox" class="props_form sm" id="search2_chk01">
+																	<label for="search2_chk01" class="props_label">디폴트</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="checkbox" class="props_form sm" id="search2_chk02" checked>
+																	<label for="search2_chk02" class="props_label">체크됨</label>
+																</div>
+															</li>
+															<li>
+																<div class="props_item">
+																	<input type="checkbox" class="props_form sm" id="search2_chk03" disabled>
+																	<label for="search2_chk03" class="props_label">비활성화</label>
+																</div>
+															</li>
+														</ul>
+													</td>
 												</tr>
 												<tr>
 													<th><span class="fv_label">Button</span></th>
-													<td></td>
-													<th><span class="fv_label">checkbox</span></th>
-													<td></td>
+													<td colspan="3">
+														<ul class="btn_box_list">
+															<li><a href="#" class="btn_box large skin2"><span class="btn_box_text">결재자 지정</span></a></li>
+															<li><a href="#" class="btn_box large"><span class="btn_box_text">임시 저장</span></a></li>
+															<li><a href="#" class="btn_box large skin3"><span class="btn_box_text">결재 요청</span></a></li>
+														</ul>
+														<br>
+														<ul class="btn_box_list">
+															<li><a href="#" class="btn_box skin2 min_size"><span class="btn_box_text">행복사</span></a></li>
+															<li><a href="#" class="btn_box skin3 min_size"><span class="btn_box_text">입력</span></a></li>
+															<li><a href="#" class="btn_box skin2 min_size"><span class="btn_box_text">저장</span></a></li>
+															<li><a href="#" class="btn_box skin3 min_size"><span class="btn_box_text">업로드</span></a></li>
+															<li><a href="#" class="btn_box skin2 min_size"><span class="btn_box_text">다운로드</span></a></li>
+															<li><a href="#" class="btn_box skin5"><span class="btn_box_text">가족사항 변경 신청</span></a></li>
+														</ul>
+													</td>
 												</tr>
 												<tr>
 													<th><span class="fv_label">Logo</span></th>
-													<td colspan="3"></td>
+													<td colspan="3">
+														<img src="./assets/images/toplogo.png" alt=""> <span style="display:inline-block;width:10px;"></span>
+														<img src="./assets/images/toplogo2.png" alt="">
+													</td>
 												</tr>
 												<tr>
 													<th><span class="fv_label">Tab</span></th>
-													<td colspan="3"></td>
+													<td colspan="3">
+														<div style="padding:20px 0 0;">
+															<div class="sc_brick_tab_row">
+																<div class="sc_tab_list_wrap" id="sctab_container">
+																	<ul class="sc_tab_list">
+																		<li><a href="#" class="sc_tab active"><span class="sc_tab_text">기본사항</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">발령</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">인적사항</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">가족</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">주소/전화</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">학력</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">경력</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">자격</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">어학</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">위촉장</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">병역</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">장애/보훈</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">직무이력</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">상벌</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">담당업무</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">교육</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">인사고충면담</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">희망부서</span></a></li>
+																		<li><a href="#" class="sc_tab"><span class="sc_tab_text">최종확인</span></a></li>
+																	</ul>
+																</div>
+															</div>
+															<script>
+																H5.tabDrag("#sctab_container");
+															</script>
+														</div>
+													</td>
 												</tr>
 											</tbody>
 										</table>

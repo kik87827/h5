@@ -358,7 +358,7 @@
 											<tr>
 												<th><span class="search_form_key">기준일</span></th>
 												<td>
-													<div class="datepicker_item">
+													<div class="datepicker_item resize_wid_set">
 														<input type="text" class="form_input datepicker" value="2024.11.13">
 													</div>
 												</td>
@@ -366,13 +366,13 @@
 											<tr>
 												<th><span class="search_form_key">계약종료일</span></th>
 												<td>
-													<ul class="inline_form_list">
+													<ul class="inline_form_list nobreak">
 														<li class="liquid">
-															<div class="datepicker_item">
+															<div class="datepicker_item resize_wid_get">
 																<input type="text" class="form_input datepicker">
 															</div>
 														</li>
-														<li class="part"></li>
+														<li class="part"><span class="inline_part_word">~</span></li>
 														<li class="liquid">
 															<div class="datepicker_item">
 																<input type="text" class="form_input datepicker">
@@ -387,20 +387,20 @@
 										<table class="search_form_tb">
 											<tr>
 												<th><span class="search_form_key">계약유형</span></th>
-												<td><select class="form_select"><option>전체</option></select></td>
+												<td><select class="form_select resize_wid_set"><option>전체</option></select></td>
 											</tr>
 											<tr>
 												<th><span class="search_form_key">소속</span></th>
 												<td>
-													<ul class="inline_form_list items_type gap_type2">
-														<li>
-															<ul class="inline_form_list items_type">
-																<li><input type="text" class="form_input"></li>
-																<li><input type="text" class="form_input"></li>
-																<li><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
+													<ul class="inline_form_list resize_break">
+														<li class="liquid">
+															<ul class="inline_form_list items_type nobreak">
+																<li class="liquid"><input type="text" class="form_input resize_wid_get"></li>
+																<li class="liquid"><input type="text" class="form_input"></li>
+																<li class="short"><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
 															</ul>
 														</li>
-														<li>
+														<li class="short">
 															<div class="props_item">
 																<input type="checkbox" class="props_form" id="search_chk02">
 																<label for="search_chk02" class="props_label">하위조직포함</label>
@@ -415,15 +415,15 @@
 										<table class="search_form_tb">
 											<tr>
 												<th><span class="search_form_key">급여유형</span></th>
-												<td><select class="form_select"><option>전체</option></select></td>
+												<td><select class="form_select resize_wid_set"><option>전체</option></select></td>
 											</tr>
 											<tr>
 												<th><span class="search_form_key">사원</span></th>
 												<td>
 													<ul class="inline_form_list items_type">
-														<li><input type="text" class="form_input"></li>
-														<li><input type="text" class="form_input"></li>
-														<li><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
+														<li class="liquid"><input type="text" class="form_input resize_wid_get"></li>
+														<li class="liquid"><input type="text" class="form_input" disabled></li>
+														<li class="short"><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
 													</ul>
 												</td>
 											</tr>
@@ -433,17 +433,17 @@
 										<table class="search_form_tb">
 											<tr>
 												<th><span class="search_form_key">직원구분</span></th>
-												<td><select class="form_select"><option>전체</option></select></td>
+												<td><select class="form_select autoitem"><option>전체</option></select></td>
 											</tr>
 											<tr>
 												<th><span class="search_form_key">주민번호뒷자리표시</span></th>
 												<td>
-													<ul class="inline_form_list items_type gap_type3">
+													<ul class="inline_form_list items_type gap_type3 mintype">
 														<li><input type="checkbox" class="props_form" id="mark_view_01"></li>
 														<li>
 															<div class="props_item reverse">
 																<input type="checkbox" class="props_form" id="mark_view_02">
-																<label for="mark_view_02" class="props_label">퇴직자포함</label>
+																<span class="props_label">퇴직자포함</span>
 															</div>
 														</li>
 													</ul>
@@ -480,117 +480,91 @@
 								</div>
 								<div class="cbox_contents">
 									<!-- 테이블 영역 -->
-									<div class="data_tb_zone">
-										<div class="data_thead_row">
-											<div class="data_thead_container">
-												<div class="data_fixed_cols">
-													<table class="data_thead_tb">
-														<tr>
-															<th><span class="data_thead_text">번호</span></th>
-															<th><span class="data_thead_text">상태</span></th>
-															<th><span class="data_thead_text"><input type="checkbox" class="props_form"><span class="thead_inner_text">삭제</span></span></th>
-															<th><span class="data_thead_text">공개</span></th>
-															<th><span class="data_thead_text">소속</span></th>
-															<th><span class="data_thead_text">직급</span></th>
-															<th><span class="data_thead_text">직책</span></th>
-															<th><span class="data_thead_text">호칭</span></th>
-															<th><span class="data_thead_text">사번</span></th>
-															<th><span class="data_thead_text has_dot">성명</span></th>
-														</tr>
-													</table>
-												</div>
-												<div class="data_liquid_cols">
-													<table class="data_thead_tb">
-														<tr>
-															<th><span class="data_thead_text">주민번호</span></th>
-															<th><span class="data_thead_text">직원구분</span></th>
-															<th><span class="data_thead_text has_dot">계약유형</span></th>
-															<th><span class="data_thead_text has_dot">계약금액</span></th>
-															<th><span class="data_thead_text has_dot">계약시작일</span></th>
-															<th><span class="data_thead_text has_dot">계약종료일</span></th>
-															<th><span class="data_thead_text">재계약일</span></th>
-															<th><span class="data_thead_text">DC전환일</span></th>
-															<th><span class="data_thead_text has_dot">급여유형</span></th>
-															<th><span class="data_thead_text has_dot">복리후생그룹</span></th>
-															<th><span class="data_thead_text has_dot">근속시작일</span></th>
-															<th><span class="data_thead_text has_dot">근속종료일</span></th>
-														</tr>
-													</table>
-												</div>
-											</div>
-										</div>	
-										<div class="data_tbody_row">
-											<div class="data_tbody_container">
-												<div class="data_fixed_cols">
-													<table class="data_tbody_tb">
-														<tr>
-															<td><span class="data_tbody_text">번호</span></td>
-															<td><span class="data_tbody_text">텍스트</span></td>
-															<td><input type="checkbox" class="props_form"></td>
-															<td><input type="checkbox" class="props_form"></td>
-															<td class="align2"><span class="data_tbody_text">에너지환경센터</span></td>
-															<td><span class="data_tbody_text">일반계약직</span></td>
-															<td><span class="data_tbody_text">팀원</span></td>
-															<td><span class="data_tbody_text">전문위원</span></td>
-															<td><span class="data_tbody_text">3000676</span></td>
-															<td><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></td>
-														</tr>
-														<tr>
-															<td><span class="data_tbody_text">번호</span></td>
-															<td><span class="data_tbody_text">텍스트</span></td>
-															<td><input type="checkbox" class="props_form"></td>
-															<td><input type="checkbox" class="props_form"></td>
-															<td class="align2"><span class="data_tbody_text">에너지환경센터</span></td>
-															<td><span class="data_tbody_text">일반계약직</span></td>
-															<td><span class="data_tbody_text">팀원</span></td>
-															<td><span class="data_tbody_text">전문위원</span></td>
-															<td><span class="data_tbody_text">3000676</span></td>
-															<td><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></td>
-														</tr>
-													</table>
-													<div class="data_tbody_fraction_row">
-														<div class="data_tbody_fraction">
-															<span class="data_fraction_current">11</span>
-															<span class="data_fraction_part">/</span>
-															<span class="data_fraction_length">345</span>
-														</div>
-													</div>
-												</div>
-												<div class="data_liquid_cols">
-													<div class="data_tbody_tb_wrap">
-														<table class="data_tbody_tb">
-															<tr>
-																<td><span class="data_tbody_text">840610-1*****</span></td>
-																<td><span class="data_tbody_text">비정규직</span></td>
-																<td><select class="form_select type2"><option>연봉직</option></select></td>
-																<td><span class="data_tbody_text">0</span></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><span class="data_tbody_text">연봉</span></td>
-																<td><span class="data_tbody_text">화이트정보통신</span></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-															</tr>
-															<tr>
-																<td><span class="data_tbody_text">840610-1*****</span></td>
-																<td><span class="data_tbody_text">비정규직</span></td>
-																<td><select class="form_select type2"><option>연봉직</option></select></td>
-																<td><span class="data_tbody_text">0</span></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><span class="data_tbody_text">연봉</span></td>
-																<td><span class="data_tbody_text">화이트정보통신</span></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-																<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
-															</tr>
-														</table>
-													</div>
-												</div>
-											</div>
+									<div class="data_render_tb_wrap">
+										<table class="data_render_tb">
+											<thead>
+												<tr>
+													<th><span class="data_thead_text">번호</span></th>
+													<th><span class="data_thead_text">상태</span></th>
+													<th><span class="data_thead_text"><input type="checkbox" class="props_form sm"><span class="thead_inner_text">삭제</span></span></th>
+													<th><span class="data_thead_text">공개</span></th>
+													<th><span class="data_thead_text">소속</span></th>
+													<th><span class="data_thead_text">직급</span></th>
+													<th><span class="data_thead_text">직책</span></th>
+													<th><span class="data_thead_text">호칭</span></th>
+													<th><span class="data_thead_text">사번</span></th>
+													<th><span class="data_thead_text has_dot">성명</span></th>
+													<th><span class="data_thead_text">주민번호</span></th>
+													<th><span class="data_thead_text">직원구분</span></th>
+													<th><span class="data_thead_text has_dot">계약유형</span></th>
+													<th><span class="data_thead_text has_dot">계약금액</span></th>
+													<th><span class="data_thead_text has_dot">계약시작일</span></th>
+													<th><span class="data_thead_text has_dot">계약종료일</span></th>
+													<th><span class="data_thead_text">재계약일</span></th>
+													<th><span class="data_thead_text">DC전환일</span></th>
+													<th><span class="data_thead_text has_dot">급여유형</span></th>
+													<th><span class="data_thead_text has_dot">복리후생그룹</span></th>
+													<th><span class="data_thead_text has_dot">근속시작일</span></th>
+													<th><span class="data_thead_text has_dot">근속종료일</span></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><span class="data_tbody_text">1</span></td>
+													<td><span class="data_tbody_text">텍스트</span></td>
+													<td class="type2"><input type="checkbox" class="props_form sm"></td>
+													<td class="type2"><input type="checkbox" class="props_form sm"></td>
+													<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></td>
+													<td><span class="data_tbody_text">일반계약직</span></td>
+													<td><span class="data_tbody_text">팀원</span></td>
+													<td><span class="data_tbody_text">전문위원</span></td>
+													<td><span class="data_tbody_text">3000676</span></td>
+													<td><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></td>
+													<td><span class="data_tbody_text">840610-1*****</span></td>
+													<td><span class="data_tbody_text">비정규직</span></td>
+													<td><select class="form_select type2"><option>연봉직</option></select></td>
+													<td><span class="data_tbody_text">0</span></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><span class="data_tbody_text">연봉</span></td>
+													<td><span class="data_tbody_text">화이트정보통신</span></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+												</tr>
+												<tr>
+													<td><span class="data_tbody_text">2</span></td>
+													<td><span class="data_tbody_text">텍스트</span></td>
+													<td class="type2"><input type="checkbox" class="props_form sm"></td>
+													<td class="type2"><input type="checkbox" class="props_form sm"></td>
+													<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></td>
+													<td><span class="data_tbody_text">일반계약직</span></td>
+													<td><span class="data_tbody_text">팀원</span></td>
+													<td><span class="data_tbody_text">전문위원</span></td>
+													<td><span class="data_tbody_text">3000676</span></td>
+													<td><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></td>
+													<td><span class="data_tbody_text">840610-1*****</span></td>
+													<td><span class="data_tbody_text">비정규직</span></td>
+													<td><select class="form_select type2"><option>연봉직</option></select></td>
+													<td><span class="data_tbody_text">0</span></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><span class="data_tbody_text">연봉</span></td>
+													<td><span class="data_tbody_text">화이트정보통신</span></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="data_tbody_fraction_row">
+										<div class="data_tbody_fraction">
+											<span class="data_fraction_current">11</span>
+											<span class="data_fraction_part">/</span>
+											<span class="data_fraction_length">345</span>
 										</div>
 									</div>
 									<!-- // 테이블 영역 -->
@@ -601,7 +575,12 @@
 				</div>
 			</section>
 			<script>
-				H5.datepicker();
+				document.addEventListener("DOMContentLoaded",()=>{
+					H5.datepicker();
+				});
+				window.addEventListener("load",()=>{
+					H5.searchBox();
+				});
 			</script>
 			<!-- // middle -->
 		</div>
