@@ -330,7 +330,7 @@ H5 = {
 					let thisItemGet = thisItem.querySelector(".resize_wid_get");
 					if(!!thisItemGet && !!thisItemSet){
 						thisItemSet.removeAttribute("style");
-						if(window.innerWidth > 1919){
+						if(window.innerWidth > 1920){
 							thisItemSet.style.width = thisItemGet.getBoundingClientRect().width + "px";
 						}else{
 							thisItemSet.style.width = "auto";
@@ -429,7 +429,6 @@ H5 = {
 							});
 							setTimeout(()=>{
 								let maxArray = Math.max.apply(null,[itemLiquidTh[index].children[0].getBoundingClientRect().width,itemLiquidTd[index].children[0].getBoundingClientRect().width]);
-								console.log(itemLiquidTh[0].children[0].getBoundingClientRect().width,itemLiquidTd[0].children[0].getBoundingClientRect().width);
 								styleTarget.forEach((item)=>{
 									item.children[0].style.width = maxArray + "px"; 
 								});
