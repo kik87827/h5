@@ -357,6 +357,8 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .inline_form_list.items_type > li:last-of-type{margin-right:0 !important;}
 .inline_form_list.items_type.gap_type2{}
 .inline_form_list.items_type.gap_type2 > li{margin-right:18px;}
+.inline_form_list.items_type.gap_type3{}
+.inline_form_list.items_type.gap_type3 > li{margin-right:18px;}
 
 .inline_form_list.each_type{display:flex; flex-wrap: nowrap; margin:-4px;}
 .inline_form_list.each_type > li{margin:4px;}
@@ -416,7 +418,10 @@ input.inline_input{border:1px solid #dddddd; border-radius:4px; padding:0 13px; 
 .btn_box.large{padding:12px 30px 13px;}
 .btn_box.large .btn_box_text{font-size:16px; font-family: 'NotoSans-Medium';}
 .btn_box_text{font-size:15px; color:#fff; line-height:1; display:inline-block;}
-
+.btn_box_list.min_size{}
+.btn_box_list{}
+.btn_box_list > li{}
+.btn_box_list > li:last-of-type{}
 /* // button */
 
 
@@ -497,7 +502,7 @@ select.form_select:disabled{background-color:#f8f8f8;border-color:#d8d8d8;cursor
 select.form_select::-ms-value {background: none; color:#6d6c6c;}
 select.form_select::-ms-expand {display: none;}
 select.form_select:disabled{}
-
+select.form_select.type2{}
 
 
 input.form_input{border:1px solid #d8d8d8; border-radius:4px; line-height:1; box-sizing: border-box; padding:0 12px; height:34px; appearance: none; width:100%;}
@@ -520,6 +525,7 @@ input.props_form{width:19px;height:19px; border-radius:100%; cursor: pointer; bo
 input.props_form:checked{background-position:0 100%;background-color:#4aa5fc;border-color:#4aa5fc;}
 input.props_form:checked + .props_label{}
 .props_label{font-size:14px; color:#4e4e4e; line-height:1; display:inline-block;}
+input.datapicker_inform{}
 /* // form */
 
 /* table */
@@ -595,6 +601,7 @@ input.props_form:checked + .props_label{}
 .search_form_box{border:1px solid #e7e7e7; border-radius:10px; padding:15px 25px; display:flex; align-items: center;}
 .search_form_box .long_cols{flex:1;min-width:0;}
 .search_form_box .short_cols{flex:0 0 60px;}
+.search_form_box.skin2{}
 .btn_search_form_submit{display:flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; width:60px; height:60px; background:#657285; border-radius:100%;}
 .btn_search_form_submit .submit_text{font-size:15px; color:#ffffff; line-height:1;}
 .search_form_tb{width:100%;}
@@ -605,9 +612,31 @@ input.props_form:checked + .props_label{}
 .search_form_tb tr:last-of-type th,
 .search_form_tb tr:last-of-type td{padding-bottom:0;}
 .search_form_key{display:inline-block; font-size:14px; color:#4e4e4e; line-height:1;white-space: nowrap;}
+.search_form_box.skin2 .search_form_key{}
+.search_form_box.skin2 .search_form_key:before{}
 .search_form_tb .inline_form_list.items_type{}
 .search_form_tb .inline_form_list.items_type > li{}
+.search_form_tb_list{}
+.search_form_tb_list > li{}
+.search_form_tb_list > li:last-of-type{}
 
+.bottom_guide_copy_wrap{}
+.guide_copy_list{}
+.guide_copy_list > li{}
+.guide_copy_list > li:last-of-type{}
+.guide_copy{}
+.guide_copy:before{}
+
+.cbox_block_wrap{}
+.cbox_block{}
+.cbox_block:last-of-type{}
+
+.cbox_title_row{}
+.cbox_title_row .liquid_cols{}
+.cbox_title_row .liquid_cols .cb_title{}
+.cbox_title_row .short_cols{}
+
+.cbox_contents{}
 
 .search_data_result_wrap{margin-top:20px;}
 .serach_data_title_row{margin-bottom:18px;}
@@ -675,6 +704,48 @@ input.props_form:checked + .props_label{}
 .panel_brick_title_row .cb_title{}
 .panel_brick_contents{}
 .panel_brick_contents .fv_tb_wrap{}
+
+.cbox_message_wrap{}
+.cbox_message_copy_group{}
+.cbox_mesage_ico_row{}
+.cbox_mesage_ico_row .ico{}
+.cbox_message_main{}
+.cbox_message_sub{}
+
+.data_tb_zone{}
+.data_thead_row{}
+.data_thead_container{}
+.data_fixed_cols{}
+.data_liquid_cols{}
+.data_thead_container .data_fixed_cols{}
+.data_thead_container .data_liquid_cols{}
+.data_tbody_container .data_fixed_cols{}
+.data_tbody_container .data_liquid_cols{}
+
+.data_thead_tb{}
+.data_thead_tb tr{}
+.data_thead_tb th{}
+.data_thead_text{}
+.data_thead_text.has_dot{}
+.data_thead_text.has_dot:before{}
+.data_thead_text input.props_form{}
+.thead_inner_text{}
+
+.data_tbody_tb_wrap{}
+.data_tbody_tb{}
+.data_tbody_tb tr{}
+.data_tbody_tb td{}
+.data_tbody_tb tr.hover td{}
+.data_tbody_tb td.align2{}
+.data_tbody_tb td .props_form{}
+.data_tbody_text{}
+.tbody_inner_text{}
+
+.data_tbody_fraction_row{}
+.data_tbody_fraction{}
+.data_fraction_current{}
+.data_fraction_part{}
+.data_fraction_length{}
 /* // contents */
 
 

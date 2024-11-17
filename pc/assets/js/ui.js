@@ -272,7 +272,7 @@ H5 = {
 					buttonImage: "./assets/images/ico_calendar.png",
 					changeMonth: true,  // 월 선택 활성화
 					changeYear: true,   // 년도 선택 활성화
-					dateFormat: "yy-mm-dd", // 날짜 형식
+					dateFormat: "yy.mm.dd", // 날짜 형식
 					monthNames: [
 						"1월", "2월", "3월", "4월", "5월", "6월",
 						"7월", "8월", "9월", "10월", "11월", "12월"
