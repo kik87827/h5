@@ -628,10 +628,10 @@ input.datapicker_inform{}
 .guide_copy:before{}
 
 .cbox_block_wrap{}
-.cbox_block{}
-.cbox_block:last-of-type{}
+.cbox_block{margin-bottom:40px;}
+.cbox_block:last-of-type{margin-bottom:0;}
 
-.cbox_title_row{}
+.cbox_title_row{display:flex; margin-bottom:18px;}
 .cbox_title_row .liquid_cols{}
 .cbox_title_row .liquid_cols .cb_title{}
 .cbox_title_row .short_cols{}
@@ -743,6 +743,7 @@ input.datapicker_inform{}
 
 .data_tbody_fraction_row{}
 .data_tbody_fraction{}
+.data_tbody_fraction:before{}
 .data_fraction_current{}
 .data_fraction_part{}
 .data_fraction_length{}
