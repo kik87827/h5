@@ -499,6 +499,20 @@
 													</td>
 												</tr>
 												<tr>
+													<th><span class="fv_label">Dropdown</span></th>
+													<td colspan="3">
+														<div class="dropdown_item" id="dropdown_item01">
+															<a href="javascript:;" class="dropdown_target">연봉직</a>
+															<div class="dropdown_option_wrap">
+																<ul class="dropdown_option_list">
+																	<li><a href="javascript:;" class="dropdown_option" data-value="0">연봉직</a></li>
+																	<li><a href="javascript:;" class="dropdown_option" data-value="1">호봉직</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
 													<th><span class="fv_label">Logo</span></th>
 													<td colspan="3">
 														<img src="./assets/images/toplogo.png" alt=""> <span style="display:inline-block;width:10px;"></span>
@@ -536,6 +550,15 @@
 															</div>
 															<script>
 																H5.tabDrag("#sctab_container");
+
+																$(function(){
+																	H5.dropDown({
+																		target : "#dropdown_item01",
+																		changeCallback(text,value){
+																			console.log(text,value)
+																		}
+																	});
+																});
 															</script>
 														</div>
 													</td>
