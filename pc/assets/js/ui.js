@@ -494,6 +494,7 @@ H5 = {
 			let $thisOptionWrap = $thisParent.find(".dropdown_option_wrap");
 			let $thisOption = null;
 
+			if($thisParent.hasClass("disabled")){return;}
 			if($thisOptionWrap.length){
 				$thisOptionWrap.attr("data-option",$thisParent.attr("id"));
 				page_wrap.append($thisOptionWrap);
@@ -501,6 +502,7 @@ H5 = {
 			$thisOption = $("[data-option='"+$thisParent.attr("id")+"']");
 
 			setTimeout(()=>{
+				$(".dropdown_option_wrap").not($thisOption).hide();
 				$thisOption.css({
 					top : $thisParent[0].getBoundingClientRect().top + $thisParent.height() + 10,
 					left : $thisParent[0].getBoundingClientRect().left + $thisParent.width() - $thisParent.width()/2

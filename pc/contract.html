@@ -577,6 +577,40 @@
 													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
 													<td><input type="text" class="datapicker_inform" value="2024.05.29"></td>
 												</tr>
+												<tr class="disabled">
+													<td><span class="data_tbody_text">3</span></td>
+													<td><span class="data_tbody_text">텍스트</span></td>
+													<td class="type2"><input type="checkbox" class="props_form sm" disabled></td>
+													<td class="type2"><input type="checkbox" class="props_form sm" disabled></td>
+													<td class="align2"><div class="cell_inner"><span class="data_tbody_text">에너지환경센터</span></td>
+													<td><span class="data_tbody_text">일반계약직</span></td>
+													<td><span class="data_tbody_text">팀원</span></td>
+													<td><span class="data_tbody_text">전문위원</span></td>
+													<td><span class="data_tbody_text">3000676</span></td>
+													<td><span class="data_tbody_text"><span class="tbody_inner_text">김**</span><button class="btn_icon ico_search"><span class="hdtext">검색</span></button></span></td>
+													<td><span class="data_tbody_text">840610-1*****</span></td>
+													<td><span class="data_tbody_text">비정규직</span></td>
+													<td>
+														<div class="dropdown_item disabled" id="dropdown_item03">
+															<a href="javascript:;" class="dropdown_target">연봉직</a>
+															<div class="dropdown_option_wrap">
+																<ul class="dropdown_option_list">
+																	<li><a href="javascript:;" class="dropdown_option" data-value="0">연봉직</a></li>
+																	<li><a href="javascript:;" class="dropdown_option" data-value="1">호봉직</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+													<td><span class="data_tbody_text">0</span></td>
+													<td><input type="text" class="datapicker_inform" disabled value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" disabled value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" disabled value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" disabled value="2024.05.29"></td>
+													<td><span class="data_tbody_text">연봉</span></td>
+													<td><span class="data_tbody_text">화이트정보통신</span></td>
+													<td><input type="text" class="datapicker_inform" disabled value="2024.05.29"></td>
+													<td><input type="text" class="datapicker_inform" disabled value="2024.05.29"></td>
+												</tr>
 											</tbody>
 										</table>
 									</div>
@@ -626,8 +660,10 @@
 					data_render_td.forEach((cell)=>{
 						cell.addEventListener("click",(e)=>{
 							let etarget = e.currentTarget;
+							let etargetTr = etarget.closest("tr");
 							let etargetNot = etarget.closest(".data_render_tb").querySelectorAll("td");
 
+							if(etargetTr.classList.contains("disabled")){return;}
 							etargetNot.forEach((notItem)=>{
 								if(etarget !== notItem){
 									notItem.classList.remove("cell_selected");
