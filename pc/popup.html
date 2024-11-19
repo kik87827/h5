@@ -344,6 +344,15 @@
 				</div>
 				<div class="popup_contents_row">
 					<div class="popup_contents_inner">
+						<!-- <div class="dropdown_item" id="dropdown_item01">
+							<a href="javascript:;" class="dropdown_target">연봉직</a>
+							<div class="dropdown_option_wrap">
+								<ul class="dropdown_option_list">
+									<li><a href="javascript:;" class="dropdown_option" data-value="0">연봉직</a></li>
+									<li><a href="javascript:;" class="dropdown_option" data-value="1">호봉직</a></li>
+								</ul>
+							</div>
+						</div> -->
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
 						내용이 들어갑니다.<br>
@@ -392,6 +401,7 @@
 		</div>
 		<!-- // popup -->
 		<script>
+
 			document.addEventListener("DOMContentLoaded", function() {
 				// 인스턴스 선언
 				let designPopup = new DesignPopup({
@@ -417,11 +427,18 @@
 					}); // hide
 				 */
 
+				 /* H5.dropDown({
+					target : "#dropdown_item01",
+					changeCallback(text,value){
+						console.log(text,value)
+					}
+				}); */
+
 				// event
 				document.querySelector("#btnCall").addEventListener("click", () => {
 					designPopup.popupShow({
 						openCallback(){
-							console.log('method show callback')
+							console.log('method show callback');
 						}
 					}); // show
 				});

@@ -378,7 +378,7 @@
 												<td>
 													<ul class="inline_form_list items_type gap_type2">
 														<li>
-															<div class="datepicker_item">
+															<div class="datepicker_item" style="width:130px">
 																<input type="text" class="form_input datepicker">
 															</div>
 														</li>
@@ -395,8 +395,8 @@
 												<th><span class="search_form_key">소속</span></th>
 												<td>
 													<ul class="inline_form_list items_type nobreak">
-														<li><input type="text" class="form_input"></li>
-														<li><input type="text" class="form_input"></li>
+														<li style="width:100px"><input type="text" class="form_input"></li>
+														<li class="liquid"><input type="text" class="form_input"></li>
 														<li><button class="btn_inline_search"><span class="hdtext">검색</span></button></li>
 													</ul>
 												</td>
@@ -630,6 +630,7 @@
 							thisItem.addClass("not_depth");
 						}
 					});
+					
 
 					// event
 					$(".depth01,.depth02,.depth03").on("click",function(e){
@@ -637,6 +638,13 @@
 						let thisCloset = thisItem.closest("li");
 						e.preventDefault();
 						thisCloset.toggleClass("active");
+					});
+				});
+
+				$(window).on("load",function(){
+					let search_data_result_wrap = $(".search_data_result_wrap");
+					$(".search_data_result_wrap").css({
+						height : $(window).height() - search_data_result_wrap[0].getBoundingClientRect().top - 120
 					});
 				});
 			</script>

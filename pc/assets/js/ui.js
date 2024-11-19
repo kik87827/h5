@@ -11,6 +11,7 @@ H5 = {
 		$(function(){
 			funcThis.dimLayerControl();
 			funcThis.layerCommon();
+			funcThis.dropDownGlobal();
 		});
 		$(window).on("load",function(){
 		});
@@ -464,6 +465,60 @@ H5 = {
 				});
 			}
 		}
+	},
+	dropDownGlobal(){
+		$(document).on("click",function(e){
+			if($(e.target).closest(".dropdown_item").length){
+				return;
+			}
+			$(".dropdown_option_wrap").hide();
+		});
+		
+
+
+		$(window).on("resize scroll",function(){
+			$(".dropdown_option_wrap").hide();
+		});
+		$(".popup_contents_row").on("scroll",function(){
+			$(".dropdown_option_wrap").hide();
+		});
+	},
+	dropDown(option){
+		const page_wrap = $(".page_wrap");
+		const dropdown = $(option.target);
+		const dropdown_target = dropdown.find(".dropdown_target");
+		dropdown_target.on("click",function(e){
+			e.preventDefault();
+			let $this = $(this);
+			let $thisParent = $this.closest(".dropdown_item");
+			let $thisOptionWrap = $thisParent.find(".dropdown_option_wrap");
+			let $thisOption = null;
+
+			if($thisOptionWrap.length){
+				$thisOptionWrap.attr("data-option",$thisParent.attr("id"));
+				page_wrap.append($thisOptionWrap);
+			}
+			$thisOption = $("[data-option='"+$thisParent.attr("id")+"']");
+
+			setTimeout(()=>{
+				$thisOption.css({
+					top : $thisParent[0].getBoundingClientRect().top + $thisParent.height() + 10,
+					left : $thisParent[0].getBoundingClientRect().left + $thisParent.width() - $thisParent.width()/2
+				}).show();
+			},30)
+		});
+		$(document).on("click","[data-option='"+dropdown.attr("id")+"'] .dropdown_option",function(e){
+			let $this = $(this);
+			let $thisText = $this.text();
+			let $thisValue = $this.attr("data-value");
+			let $thisParents = $this.closest(".dropdown_option_wrap");
+			let $thisItem = $("#"+$thisParents.attr("data-option"));
+			$thisItem.find(".dropdown_target").text($thisText);
+
+			if(option.changeCallback){
+				option.changeCallback($thisText,$thisValue);
+			}
+		});
 	}
 };
 H5.init();
