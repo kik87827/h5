@@ -509,7 +509,7 @@ $.Widget.prototype = {
 			classes: this.options.classes || {}
 		}, options );
 
-		function processClassString( classes, checkOption ) {
+		function processclasstring( classes, checkOption ) {
 			var current, i;
 			for ( i = 0; i < classes.length; i++ ) {
 				current = that.classesElementLookup[ classes[ i ] ] || $();
@@ -531,10 +531,10 @@ $.Widget.prototype = {
 		} );
 
 		if ( options.keys ) {
-			processClassString( options.keys.match( /\S+/g ) || [], true );
+			processclasstring( options.keys.match( /\S+/g ) || [], true );
 		}
 		if ( options.extra ) {
-			processClassString( options.extra.match( /\S+/g ) || [] );
+			processclasstring( options.extra.match( /\S+/g ) || [] );
 		}
 
 		return full.join( " " );

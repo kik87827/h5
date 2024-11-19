@@ -57,6 +57,8 @@ H5 = {
 			e.preventDefault();
 			var $this = $(this),
 				$t_child = $this.find(".utilmenu_layer");
+			
+			$(".utilmenu_layer").not($t_child).fadeOut();
 			$t_child.fadeToggle();
 			//$hlog_target.click();
 		});
