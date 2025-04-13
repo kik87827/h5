@@ -275,7 +275,7 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .sc_tab_list{display:flex;position:relative;}
 .sc_tab_list > li{}
 .sc_tab_list > li:last-of-type{}
-.sc_tab{display:flex; position:relative; min-height:30px; align-items: center;  white-space: nowrap;padding:0 20px 12px; box-sizing: border-box;
+.sc_tab{display:flex; position:relative; min-height:22px; align-items: center;  white-space: nowrap;padding:0 20px 12px; box-sizing: border-box;
 
 	-webkit-user-select:none;
   -moz-user-select:none;
@@ -313,24 +313,24 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .form_view_container .fv_tb_wrap{border:0;}
 .form_view_container .fv_tb tr:last-of-type th,
 .form_view_container .fv_tb tr:last-of-type td{border-bottom:0;}
-.fv_img_cols{padding:25px;flex:0 0 142px;}
+.fv_img_cols{padding:8px 25px;flex:0 0 142px; display:flex; flex-direction:column; align-items:center; justify-content:center;}
 .fv_tb_cols{flex:1;border-left:1px solid #e7e7e7;}
 .fv_img_wrap{}
 .fv_img_wrap > img{width:142px;height:192px;border:1px solid #e0e0e0; object-fit: cover; object-position: 0 0;}
 .fv_tb_wrap{border-top:1px solid #96a0bd;}
 .fv_tb_wrap.skin2{}
 .fv_tb_wrap.skin2 .fv_tb th{text-align: left;width:1px;padding:10px;}
-.fv_tb_wrap.skin2 .fv_tb td{padding:8px 10px;}
+.fv_tb_wrap.skin2 .fv_tb td{padding:5px 10px;}
 .fv_tb_wrap.skin2 .fv_label{padding-left:9px;position:relative; white-space: nowrap;}
 .fv_tb_wrap.skin2 .fv_label:before{display:block;content:'';width:3px;height:3px; background:#4aa5fc; border-radius:100%; position:absolute;top:10px;left:0;}
 .fv_tb_wrap.skin3{border-top:0;}
 .fv_tb_wrap.skin3 .fv_tb th{width:auto;}
 .fv_tb_wrap.skin3 .fv_tb th,
-.fv_tb_wrap.skin3 .fv_tb td{padding:7px 15px;}
+.fv_tb_wrap.skin3 .fv_tb td{padding:5px 15px;}
 .fv_tb_wrap.file_type{}
 .fv_tb_wrap.file_type .fv_tb{}
-.fv_tb_wrap.file_type .fv_tb th{padding:8px 10px;}
-.fv_tb_wrap.file_type .fv_tb td{padding:8px 10px;}
+.fv_tb_wrap.file_type .fv_tb th{padding:5px 10px;}
+.fv_tb_wrap.file_type .fv_tb td{padding:5px 10px;}
 
 .fv_tb_wrap.guide .fv_tb th,
 .fv_tb_wrap.guide .fv_tb td{padding:15px;}
@@ -338,8 +338,8 @@ _:-ms-fullscreen, :root .mc_calendar_wrap .ui-widget-header .ui-state-highlight{
 .fv_tb{width:100%;table-layout: fixed;}
 .fv_tb th,
 .fv_tb td{border:1px solid #e7e7e7;}
-.fv_tb th{background:#f8fbfd; text-align: center; padding:15px; width:115px;}
-.fv_tb td{padding:8px 18px;}
+.fv_tb th{background:#f8fbfd; text-align: center; padding:10px 15px; width:115px;}
+.fv_tb td{padding:5px 18px;}
 .fv_tb tr th:first-of-type{border-left:0}
 .fv_tb tr td:last-of-type{border-right:0}
 .fv_tb td{text-align: left;}
@@ -641,7 +641,7 @@ input.datapicker_inform{ line-height:1; height:26px; box-sizing: border-box; pad
 .panel_cols.long{flex:1;}
 .sc_tab_list_wrap.panel_tab_wrap{margin-bottom:25px;}
 .sc_tab_list_wrap.panel_tab_wrap:before{display:block;content:'';width:100%;height:1px; background:#f0f0f0; position:absolute;bottom:0;left:0;}
-.search_form_box{border:1px solid #e7e7e7; border-radius:10px; padding:15px 25px; display:flex; align-items: center;}
+.search_form_box{border:1px solid #e7e7e7; border-radius:10px; padding:10px 25px; display:flex; align-items: center;}
 .search_form_box .long_cols{flex:1;min-width:0;}
 .search_form_box .short_cols{flex:0 0 60px; margin-left:30px;}
 .search_form_box.skin2{}
@@ -781,7 +781,7 @@ input.datapicker_inform{ line-height:1; height:26px; box-sizing: border-box; pad
 .data_render_tb tr{}
 .data_render_tb tr:hover td{background:#f8fcff;}
 .data_render_tb th,
-.data_render_tb td{height:49px;box-sizing: border-box;padding:10px;border-bottom:1px solid #e7e7e7;position:relative;}
+.data_render_tb td{height:44px;box-sizing: border-box;padding:10px;border-bottom:1px solid #e7e7e7;position:relative;}
 .data_render_tb td.type2{font-size:0;line-height:0; padding-top:0;padding-bottom:0;}
 .data_render_tb td.cell_selected:before{display:block;content:'';width:100%;height:100%;position:absolute;top:0;left:0;box-sizing: border-box;border:2px solid #b3daff; background:#fff;}
 .data_render_tb td > *{position:relative;}
