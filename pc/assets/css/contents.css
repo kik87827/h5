@@ -604,6 +604,15 @@ input.datapicker_inform{ line-height:1; height:26px; box-sizing: border-box; pad
 .sign_value_wrap .ico.shape_men{width:13px; height:18px; background-image:url("../images/icon_men.png");}
 .sign_men_text{font-size:14px; color:#5f5f5f; }
 
+.sign_from_box.skin2{border-color:#cde7e4;}
+.sign_from_box.skin2 .key_row{background-color:#f3fcfb}
+.sign_from_box.skin2 .ico.shape_men{background-image:url("../images/icon_men2.png");}
+
+.sign_from_box.skin3{border-color:#e5daf7;}
+.sign_from_box.skin3 .key_row{background-color:#f9f6fe}
+.sign_from_box.skin3 .ico.shape_men{background-image:url("../images/icon_men3.png");}
+
+
 .fv_note_wrap{margin-top:15px; border:1px solid #e7e7e7; border-radius:8px; }
 .note_container{display:flex;  align-items: center;padding:13px 18px;}
 .note_main_cols{flex:1;}
